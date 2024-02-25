@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float zataceni = 100f;
+    public float zataceni = 50f;
     public float akcelerace = 50f;
-    public float maxRychlost = 100f;
+    public float maxRychlost = 200f;
     public float couvaciRychlost = 20f;
 
 
@@ -16,10 +16,55 @@ public class Movement : MonoBehaviour
     private float moveInput = 0f;
     private float rotateInput = 0f;
 
+    public bool isSpeedBoostActive = false;
+    private float speedBoostDuration = 5f;
+    public float speedBoostTimer = 0f;
+    private float originalMaxSpeed;
+
+    public bool isTurnBoostActive = false;
+    private float turnBoostDuration = 5f;
+    public float turnBoostTimer = 0f;
+    private float originalZataceni;
+
+    public bool isAccBoostActive = false;
+    private float accBoostDuration = 5f;
+    public float accBoostTimer = 0f;
+    private float originalAcc;
+
     void Update()
     {
         ReadInput();
         HandleMovement();
+
+        if (isSpeedBoostActive)
+        {
+            speedBoostTimer += Time.deltaTime;
+            if (speedBoostTimer >= speedBoostDuration)
+            {
+                maxRychlost = originalMaxSpeed; 
+                isSpeedBoostActive = false;
+            }
+        }
+
+        if (isTurnBoostActive)
+        {
+            turnBoostTimer += Time.deltaTime;
+            if (turnBoostTimer >= turnBoostDuration)
+            {
+                zataceni = originalZataceni; 
+                isTurnBoostActive = false;
+            }
+        }
+
+        if (isAccBoostActive)
+        {
+            accBoostTimer += Time.deltaTime;
+            if (accBoostTimer >= accBoostDuration)
+            {
+                maxRychlost = originalAcc;
+                isAccBoostActive = false;
+            }
+        }
     }
 
     void ReadInput()
@@ -75,8 +120,40 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        moveInput = -moveInput;
-        rotateInput = -rotateInput;
-        aktualniRychlost = -aktualniRychlost;
+        moveInput = -moveInput / 3;
+        rotateInput = -rotateInput / 3;
+        aktualniRychlost = -aktualniRychlost / 3;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Zpomalení
+        if (other.CompareTag("Kaluz") && !isSpeedBoostActive && !isAccBoostActive)
+        {
+            // Zaznamenat pùvodní maximální rychlost pøed zpomalením
+            originalMaxSpeed = maxRychlost;
+
+            isSpeedBoostActive = true;
+            maxRychlost = 100f;
+            speedBoostTimer = 0f;
+        }
+
+        if (other.CompareTag("Zataceni") && !isTurnBoostActive)
+        {
+            originalZataceni = zataceni;
+
+            isTurnBoostActive = true;
+            zataceni = 25f;
+            turnBoostTimer = 0f;
+        }
+
+        if (other.CompareTag("Zrychleni") && !isAccBoostActive && !isSpeedBoostActive)
+        {
+            originalAcc = maxRychlost;
+
+            isAccBoostActive = true;
+            maxRychlost = 300f;
+            accBoostTimer = 0f;
+        }
     }
 }

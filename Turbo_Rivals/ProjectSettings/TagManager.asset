@@ -7,6 +7,9 @@ TagManager:
   - Obstacle
   - Mimo
   - Checkpoint
+  - Kaluz
+  - Zataceni
+  - Zrychleni
   layers:
   - Default
   - TransparentFX
