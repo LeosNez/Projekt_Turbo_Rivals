@@ -1,16 +1,23 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
+    public Transform needle;
+
+    public Text Zpatecka;
+
+    public float minAngle = -40f;
+    public float maxAngle = 220f;
+
     public float zataceni = 50f;
     public float akcelerace = 50f;
     public float maxRychlost = 200f;
     public float couvaciRychlost = 20f;
-
 
     public float aktualniRychlost = 0f;
     private float moveInput = 0f;
@@ -27,7 +34,7 @@ public class Movement : MonoBehaviour
     private float originalZataceni;
 
     public bool isAccBoostActive = false;
-    private float accBoostDuration = 5f;
+    private float accBoostDuration = 3f;
     public float accBoostTimer = 0f;
     private float originalAcc;
 
@@ -41,7 +48,7 @@ public class Movement : MonoBehaviour
             speedBoostTimer += Time.deltaTime;
             if (speedBoostTimer >= speedBoostDuration)
             {
-                maxRychlost = originalMaxSpeed; 
+                maxRychlost = originalMaxSpeed;
                 isSpeedBoostActive = false;
             }
         }
@@ -51,7 +58,7 @@ public class Movement : MonoBehaviour
             turnBoostTimer += Time.deltaTime;
             if (turnBoostTimer >= turnBoostDuration)
             {
-                zataceni = originalZataceni; 
+                zataceni = originalZataceni;
                 isTurnBoostActive = false;
             }
         }
@@ -65,6 +72,12 @@ public class Movement : MonoBehaviour
                 isAccBoostActive = false;
             }
         }
+
+        float normalizedSpeed = Mathf.Clamp01(aktualniRychlost / maxRychlost);
+        float angle = Mathf.Lerp(maxAngle, minAngle, normalizedSpeed);
+
+        // Rotate the needle to the calculated angle
+        needle.localRotation = Quaternion.Euler(0f, 0f, angle);
     }
 
     void ReadInput()
@@ -72,10 +85,15 @@ public class Movement : MonoBehaviour
         moveInput = 0f;
         rotateInput = 0f;
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (!isAccBoostActive)
         {
-            moveInput = 1f;
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                moveInput = 1f;
+            }
         }
+
+
         if (Input.GetKey(KeyCode.DownArrow))
         {
             moveInput = -1f;
@@ -99,23 +117,25 @@ public class Movement : MonoBehaviour
         if (moveInput >= 0)
         {
             aktualniRychlost += moveInput * akcelerace * Time.deltaTime;
+            Zpatecka.text = "";
         }
         else
         {
             aktualniRychlost += moveInput * couvaciRychlost * Time.deltaTime;
+            Zpatecka.text = "R";
         }
 
-        aktualniRychlost = Mathf.Clamp(aktualniRychlost, -maxRychlost, maxRychlost); //  Tato funkce se stará o to, že první hodnota zùstane mezi druhou a tøetí hodnotou kde druhá je min a tøetí je max
+        aktualniRychlost = Mathf.Clamp(aktualniRychlost, -maxRychlost, maxRychlost); //  Tato funkce se starÃ¡ o to, Å¾e prvnÃ­ hodnota zÃ¹stane mezi druhou a tÃ¸etÃ­ hodnotou kde druhÃ¡ je min a tÃ¸etÃ­ je max
 
-        transform.Translate(Vector3.forward * aktualniRychlost * Time.deltaTime); // Stará se o pohyb
+        transform.Translate(Vector3.forward * aktualniRychlost * Time.deltaTime); // StarÃ¡ se o pohyb
 
         if (Mathf.Abs(moveInput) < 0.1f)
         {
-            aktualniRychlost = Mathf.Lerp(aktualniRychlost, 0f, Time.deltaTime); // Postupné zpomalování. Lerp se stará o plynulý pohyb. první v závorce je poèáteèní hodnota, v druhé hodnota na kterou se chceme dostat. Poslední zajišuje plynulý pohyb
+            aktualniRychlost = Mathf.Lerp(aktualniRychlost, 0f, Time.deltaTime); // PostupnÃ© zpomalovÃ¡nÃ­. Lerp se starÃ¡ o plynulÃ½ pohyb. prvnÃ­ v zÃ¡vorce je poÃ¨Ã¡teÃ¨nÃ­ hodnota, v druhÃ© hodnota na kterou se chceme dostat. PoslednÃ­ zajiÅ¡Âuje plynulÃ½ pohyb
         }
 
-        float rotation = rotateInput * zataceni * Time.deltaTime; // Nastavení rotace objektu pøi zatáèení
-        transform.Rotate(Vector3.up * rotation); // objekt se bude otáèeet po ose Y na základì rotace
+        float rotation = rotateInput * zataceni * Time.deltaTime; // NastavenÃ­ rotace objektu pÃ¸i zatÃ¡Ã¨enÃ­
+        transform.Rotate(Vector3.up * rotation); // objekt se bude otÃ¡Ã¨eet po ose Y na zÃ¡kladÃ¬ rotace
     }
 
     private void OnCollisionEnter(Collision col)
@@ -127,10 +147,10 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Zpomalení
+        // ZpomalenÃ­
         if (other.CompareTag("Kaluz") && !isSpeedBoostActive && !isAccBoostActive)
         {
-            // Zaznamenat pùvodní maximální rychlost pøed zpomalením
+            // Zaznamenat pÃ¹vodnÃ­ maximÃ¡lnÃ­ rychlost pÃ¸ed zpomalenÃ­m
             originalMaxSpeed = maxRychlost;
 
             isSpeedBoostActive = true;
@@ -152,8 +172,9 @@ public class Movement : MonoBehaviour
             originalAcc = maxRychlost;
 
             isAccBoostActive = true;
-            maxRychlost = 300f;
+            maxRychlost = 1000f;
             accBoostTimer = 0f;
+            aktualniRychlost = maxRychlost;
         }
     }
 }
