@@ -12,6 +12,13 @@
 			<method name="PrejdiNaCilovouScenu"/>
 			<method name="PrejdiNaCilovouScenu"/>
 			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+		</type>
+		<type fullname="Quit">
+			<method name="GameEnd"/>
+		</type>
+		<type fullname="SaveData">
+			<method name="SaveToFile"/>
 		</type>
 	</assembly>
 </linker>

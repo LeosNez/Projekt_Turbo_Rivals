@@ -9,6 +9,20 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Checkpoint",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Cil",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "DelayedCallManager",
             "fullManagedTypeName": "",
@@ -23,6 +37,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -35,6 +50,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -54,6 +70,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -66,6 +83,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "music",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "NamedObject",
             "fullManagedTypeName": "",
@@ -73,6 +97,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -92,9 +117,17 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Odpocitavani",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
@@ -118,6 +151,20 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Prekazky",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Quit",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "ResourceManager",
             "fullManagedTypeName": "",
@@ -133,9 +180,32 @@
         },
         {
             "managedAssemblyName": "",
+            "nativeClass": "SampleClip",
+            "fullManagedTypeName": "",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Level1.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SaveData",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "",
             "nativeClass": "ShaderNameRegistry",
             "fullManagedTypeName": "",
             "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Skokanek",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -143,6 +213,13 @@
             "nativeClass": "StreamingManager",
             "fullManagedTypeName": "",
             "moduleName": "Streaming",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SwitchCam",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -188,6 +265,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -242,7 +320,17 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioClip",
+            "fullManagedTypeName": "UnityEngine.AudioClip",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Level1.unity"
             ]
         },
         {
@@ -253,7 +341,17 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioSource",
+            "fullManagedTypeName": "UnityEngine.AudioSource",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Level1.unity"
             ]
         },
         {
@@ -264,6 +362,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -286,6 +385,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -298,6 +398,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -310,8 +411,18 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "CapsuleCollider",
+            "fullManagedTypeName": "UnityEngine.CapsuleCollider",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/Level1.unity"
             ]
         },
         {
@@ -332,6 +443,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -344,6 +456,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -370,6 +483,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -382,6 +496,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -394,6 +509,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -406,6 +522,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -418,6 +535,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -470,6 +588,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -482,6 +601,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -501,6 +621,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -530,6 +651,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -552,8 +674,18 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "SphereCollider",
+            "fullManagedTypeName": "UnityEngine.SphereCollider",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/Level1.unity"
             ]
         },
         {
@@ -576,6 +708,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -588,6 +721,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -600,6 +734,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
@@ -612,6 +747,7 @@
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/LvlMenu.unity",
+                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]

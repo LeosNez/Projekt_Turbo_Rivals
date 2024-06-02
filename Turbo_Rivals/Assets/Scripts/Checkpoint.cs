@@ -26,7 +26,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Checkpoint"))
         {
-            lastCheckpointPosition = new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z);
+            lastCheckpointPosition = new Vector3(other.transform.position.x, 2.867133f, other.transform.position.z);
             lastCheckpointRotation = other.transform.rotation;
         }
 
