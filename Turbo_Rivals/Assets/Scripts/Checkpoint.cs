@@ -16,7 +16,7 @@ public class Checkpoint : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             ReturnToLastCheckpoint();
         }

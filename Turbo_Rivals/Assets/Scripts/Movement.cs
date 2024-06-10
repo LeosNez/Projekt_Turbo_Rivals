@@ -13,8 +13,8 @@ public class Movement : MonoBehaviour
 
     public GameObject fire;
 
-    public float minAngle = -40f;
-    public float maxAngle = 220f;
+    public float minAngle = -45f;
+    public float maxAngle = 225f;
 
     public float zataceni = 50f;
     public float akcelerace = 5f;
@@ -55,7 +55,6 @@ public class Movement : MonoBehaviour
             speedBoostTimer += Time.deltaTime;
             if (speedBoostTimer >= speedBoostDuration)
             {
-                zataceni = originalZataceni;
                 maxRychlost = originalMaxSpeed;
                 isSpeedBoostActive = false;
                 minAngle = -40f;
@@ -85,7 +84,7 @@ public class Movement : MonoBehaviour
         float normalizedSpeed = Mathf.Clamp01(aktualniRychlost / maxRychlost);
         float angle = Mathf.Lerp(maxAngle, minAngle, normalizedSpeed);
 
-        needle.localRotation = Quaternion.Euler(0f, 0f, angle);
+        needle.localRotation = Quaternion.Euler(0f, 0f, angle); //x, y, z
     }
 
     void ReadInput()
@@ -131,19 +130,19 @@ public class Movement : MonoBehaviour
             fire.gameObject.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && !isTurnBoostActive)
         {
             originalZataceni = zataceni;
             zataceni = originalZataceni;
             zataceni = zataceniDrift;
         }
-        
-        if (Input.GetKeyUp(KeyCode.S))
+
+        if (Input.GetKeyUp(KeyCode.S) && !isTurnBoostActive)
         {
             zataceni = originalZataceni;
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             aktualniRychlost = 0f;
             moveInput = 0f;
@@ -207,7 +206,6 @@ public class Movement : MonoBehaviour
             maxRychlost = 100f;
             speedBoostTimer = 0f;
             minAngle = 90f;
-            zataceni = zataceni * 2;
         }
 
         if (other.CompareTag("Zataceni") && !isTurnBoostActive)

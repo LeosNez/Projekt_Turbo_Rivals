@@ -18,7 +18,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 530c74be172cccc49a571e6f8e3f9592
   - enabled: 1
-    path: Assets/Scenes/StartAnim.unity
-    guid: 06149110b9ca4c64f9636fbbcb9295cd
+    path: Assets/Scenes/Tutorial2.unity
+    guid: 47815e9097399c44b910fe213d0f89ff
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 4a7b44cfc2dc17b46bfc2783ba59a561
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 8dba2635581576548a225dbc44af4462
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

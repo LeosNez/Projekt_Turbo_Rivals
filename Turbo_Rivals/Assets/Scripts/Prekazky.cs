@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class Prekazky : MonoBehaviour
 {
-    // Reference to the Rigidbody component of the obstacle
     private Rigidbody rb;
 
-    // Variable to specify how strong the force should be to knock down the obstacle
     public float knockdownForce = 50f;
 
-    // Check if the obstacle has already been knocked down
     private bool isKnockedDown = false;
 
     void Start()
     {
-        // Get the Rigidbody component
         rb = GetComponent<Rigidbody>();
     }
 
@@ -25,15 +21,15 @@ public class Prekazky : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !isKnockedDown)
         {
             // Calculate the force direction
+            // collision.contacts[0].point je místo prvního kontaktu pøi kolizi
             Vector3 forceDirection = transform.position - collision.contacts[0].point;
 
             // Apply force to the obstacle in the calculated direction
+            // forceDirection.normalized zajistí, že síla bude aplikována ve správném smìru s jednotkovou délkou
             rb.AddForce(forceDirection.normalized * knockdownForce, ForceMode.Impulse);
 
             // Set the obstacle as knocked down
             isKnockedDown = true;
-
-            // Optionally, you can add other effects like playing a sound or particle effects here
         }
     }
 }

@@ -36,10 +36,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -49,10 +51,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -63,16 +67,25 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Leaderboard",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "LevelGameManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -96,10 +109,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -116,10 +131,12 @@
             "moduleName": "AI",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -184,7 +201,9 @@
             "fullManagedTypeName": "",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/Level1.unity"
+                "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity"
             ]
         },
         {
@@ -264,10 +283,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -319,9 +340,11 @@
             "moduleName": "Audio",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
-                "Assets/Scenes/StartUpMenu.unity"
+                "Assets/Scenes/StartUpMenu.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -330,7 +353,9 @@
             "fullManagedTypeName": "UnityEngine.AudioClip",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/Level1.unity"
+                "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity"
             ]
         },
         {
@@ -340,9 +365,11 @@
             "moduleName": "Audio",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
-                "Assets/Scenes/StartUpMenu.unity"
+                "Assets/Scenes/StartUpMenu.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -351,7 +378,9 @@
             "fullManagedTypeName": "UnityEngine.AudioSource",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/Level1.unity"
+                "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity"
             ]
         },
         {
@@ -361,10 +390,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -374,6 +405,8 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
         },
@@ -384,10 +417,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -397,10 +432,12 @@
             "moduleName": "UI",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -410,10 +447,12 @@
             "moduleName": "UI",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -422,7 +461,9 @@
             "fullManagedTypeName": "UnityEngine.CapsuleCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/Level1.unity"
+                "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity"
             ]
         },
         {
@@ -432,6 +473,8 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
         },
@@ -442,10 +485,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -455,10 +500,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -482,10 +529,12 @@
             "moduleName": "TextRendering",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -495,10 +544,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -508,10 +559,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -521,10 +574,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -534,10 +589,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -547,7 +604,10 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -557,6 +617,8 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
         },
@@ -567,7 +629,10 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -577,7 +642,10 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -587,10 +655,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -600,10 +670,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -620,10 +692,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -633,7 +707,10 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -650,10 +727,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -663,6 +742,8 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/Tutorial.unity"
             ]
         },
@@ -673,10 +754,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -685,7 +768,9 @@
             "fullManagedTypeName": "UnityEngine.SphereCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/Level1.unity"
+                "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity"
             ]
         },
         {
@@ -695,9 +780,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -707,10 +795,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -720,10 +810,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -733,10 +825,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -746,10 +840,12 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Level1.unity",
+                "Assets/Scenes/Level2.unity",
+                "Assets/Scenes/Level3.unity",
                 "Assets/Scenes/LvlMenu.unity",
-                "Assets/Scenes/StartAnim.unity",
                 "Assets/Scenes/StartUpMenu.unity",
-                "Assets/Scenes/Tutorial.unity"
+                "Assets/Scenes/Tutorial.unity",
+                "Assets/Scenes/Tutorial2.unity"
             ]
         },
         {
@@ -783,7 +879,28 @@
         {
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.InputField",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.RawImage",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Text",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Username",
             "moduleName": "",
             "usedInScenes": []
         }

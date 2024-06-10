@@ -1,30 +1,47 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Odpocitavani : MonoBehaviour
 {
-    public Text countdownText;
-
-    private int countdownTime = 3;
+    public Canvas countdownCanvas; // Reference na Canvas pro odpoèítávání
+    public Text countdownText; // Reference na Text pro zobrazení odpoèítávání
+    public InputField inputField; // Reference na InputField
 
     void Start()
     {
-        InvokeRepeating("CountdownTick", 0f, 1f);
+        // Pøidání posluchaèe pro událost "End Edit" InputFieldu
+        inputField.onEndEdit.AddListener(delegate { StartCountdown(); });
     }
 
-    void CountdownTick()
+    public void StartCountdown()
     {
-        countdownText.text = countdownTime.ToString();
-        countdownTime--;
+        // Aktivace Canvasu pro odpoèítávání
+        countdownCanvas.gameObject.SetActive(true);
+        // Spuštìní coroutine pro odpoèítávání
+        StartCoroutine(CountdownCoroutine()); //Korutina v Unity je speciální typ metody, která mùže být asynchronnì spuštìna a provádìna po dobu nìkolika snímkù hry
+    }
 
-        if (countdownTime < 0)
+    private IEnumerator CountdownCoroutine() //rozhraní v jazyce C#, které umožòuje implementovat iterativní operace
+    {
+        // Zastavení hry
+        Time.timeScale = 0f;
+
+        int countdown = 3;
+        while (countdown > 0)
         {
-            countdownText.text = "GO!";
-            // Zastavíme opakování, když dosáhneme nuly.
-            CancelInvoke("CountdownTick");
-
-            SceneManager.LoadScene("Level1");
+            countdownText.text = countdown.ToString();
+            yield return new WaitForSecondsRealtime(1); // Toto klíèové slovo se používá k vrácení hodnoty z korutiny a doèasnému pozastavení jejího bìhu
+            countdown--;
         }
+
+        countdownText.text = "GO!";
+        yield return new WaitForSecondsRealtime(1);
+
+        // Deaktivace Canvasu po odpoèítávání
+        countdownCanvas.gameObject.SetActive(false);
+
+        // Obnovení normální rychlosti hry
+        Time.timeScale = 1f;
     }
 }

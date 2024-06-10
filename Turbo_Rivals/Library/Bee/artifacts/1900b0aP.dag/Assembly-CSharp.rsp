@@ -318,6 +318,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.1.16f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Checkpoint.cs"
 "Assets/Scripts/Cil.cs"
+"Assets/Scripts/Leaderboard.cs"
 "Assets/Scripts/Movement.cs"
 "Assets/Scripts/music.cs"
 "Assets/Scripts/Odpocitavani.cs"
@@ -331,6 +332,7 @@
 "Assets/Scripts/SwitchCam.cs"
 "Assets/Scripts/Timer.cs"
 "Assets/Scripts/Tutorial.cs"
+"Assets/Scripts/Username.cs"
 -langversion:9.0
 
 /deterministic

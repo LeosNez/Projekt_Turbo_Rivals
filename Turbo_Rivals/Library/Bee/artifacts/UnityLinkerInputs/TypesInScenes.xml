@@ -2,6 +2,7 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="Checkpoint" preserve="nothing"/>
 		<type fullname="Cil" preserve="nothing"/>
+		<type fullname="Leaderboard" preserve="nothing"/>
 		<type fullname="Movement" preserve="nothing"/>
 		<type fullname="music" preserve="nothing"/>
 		<type fullname="Odpocitavani" preserve="nothing"/>
@@ -15,6 +16,7 @@
 		<type fullname="SwitchCam" preserve="nothing"/>
 		<type fullname="Timer" preserve="nothing"/>
 		<type fullname="Tutorial" preserve="nothing"/>
+		<type fullname="Username" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine">
 		<type fullname="UnityEditor.AudioManager" preserve="nothing"/>
@@ -72,6 +74,8 @@
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.InputField" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.RawImage" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
 	</assembly>
 </linker>

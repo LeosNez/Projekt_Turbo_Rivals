@@ -19,17 +19,13 @@ public class Timer : MonoBehaviour
     {
         if (timeIsRunning)
         {
-            if (timeRemaining >= 0)
-            {
-                timeRemaining += Time.deltaTime;
-                DisplayTime(timeRemaining);
-            }
+            timeRemaining += Time.deltaTime;
+            DisplayTime(timeRemaining);
         }
     }
 
     void DisplayTime(float timeToDisplay)
     {
-        timeToDisplay += 1;
         float minutes = Mathf.FloorToInt(timeToDisplay / 60); //pøevede èas z vteøin na minuty a zaokrouhlí smìrem dolù na celé minuty
         float seconds = Mathf.FloorToInt(timeToDisplay % 60); //vrátí zbytek a to jsou vteøiny
         float milliseconds = Mathf.FloorToInt((timeToDisplay * 100) % 100); // Získání setin sekundy

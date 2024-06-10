@@ -1,9 +1,30 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="Leaderboard">
+			<method name="Lead"/>
+			<method name="Lead"/>
+			<method name="Lead"/>
+		</type>
 		<type fullname="Play">
+			<method name="Zacni"/>
+			<method name="Zacni"/>
 			<method name="Zacni"/>
 		</type>
 		<type fullname="PrechodSceny">
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
 			<method name="PrejdiNaCilovouScenu"/>
 			<method name="PrejdiNaCilovouScenu"/>
 			<method name="PrejdiNaCilovouScenu"/>
@@ -17,8 +38,10 @@
 		<type fullname="Quit">
 			<method name="GameEnd"/>
 		</type>
-		<type fullname="SaveData">
-			<method name="SaveToFile"/>
+		<type fullname="Username">
+			<method name="JmenoHrace"/>
+			<method name="JmenoHrace"/>
+			<method name="JmenoHrace"/>
 		</type>
 	</assembly>
 </linker>

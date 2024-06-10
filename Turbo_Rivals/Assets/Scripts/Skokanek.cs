@@ -28,9 +28,9 @@ public class Skokanek : MonoBehaviour
 
     void Jump()
     {
-        if (isOnSlope) return; // Pokud ještì na rampì, neproveïte skok
-        Rigidbody rb = GetComponent<Rigidbody>(); // Pøístup k Rigidbody komponentì vozidla
-        rb.AddForce(transform.forward * jumpDistance, ForceMode.Impulse); // Aplikace síly smìrem vpøed pro let po skoku
+        if (isOnSlope) return; // Pokud je ještì auto na rampì, neproveïte skok
+        Rigidbody rb = GetComponent<Rigidbody>(); // Pøístup k Rigidbody vozidla
+        rb.AddForce(transform.forward * jumpDistance, ForceMode.Impulse); // Aplikace síly smìrem vpøed pro let po skoku. ForceMode.Impulse zajistí, že se ptovede hned
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); // Aplikace síly smìrem nahoru pro skok
     }
 }

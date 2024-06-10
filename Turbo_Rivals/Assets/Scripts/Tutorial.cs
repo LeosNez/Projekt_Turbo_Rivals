@@ -42,6 +42,11 @@ public class Tutorial : MonoBehaviour
             currentStep++;
             DisplayInstructions();
         }
+        else if (Input.GetKey(KeyCode.S) && currentStep == 5)
+        {
+            currentStep++;
+            DisplayInstructions();
+        }
     }
 
     void DisplayInstructions()
@@ -62,6 +67,9 @@ public class Tutorial : MonoBehaviour
                 break;
             case 4:
                 tutorialText.text = "Pro zrychlení stisknìte T";
+                break;
+            case 5:
+                tutorialText.text = "Teï zkus smyk pomocí S";
                 break;
             default:
                 tutorialText.text = "Blahopøeji! úspìšnì si prošel tutorialem :)";
