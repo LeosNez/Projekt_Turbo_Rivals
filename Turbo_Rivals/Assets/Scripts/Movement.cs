@@ -45,6 +45,13 @@ public class Movement : MonoBehaviour
     public float accBoostTimer = 0f;
     private float originalAcc;
 
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     void Update()
     {
         ReadInput();
@@ -195,6 +202,13 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Draha"))
+        {
+            moveInput = moveInput;
+            rotateInput = rotateInput;
+            aktualniRychlost = aktualniRychlost;
+        }
+
         // Zpomalení
         if (other.CompareTag("Kaluz") && !isSpeedBoostActive && !isAccBoostActive)
         {

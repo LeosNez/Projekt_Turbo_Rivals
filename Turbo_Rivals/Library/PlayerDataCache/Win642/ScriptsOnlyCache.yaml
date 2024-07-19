@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - Prekazky
     - Quit
     - SaveData
+    - ShowlLdbrd
     - Skokanek
     - SwitchCam
     - Timer
@@ -77,8 +78,14 @@ ScriptsOnlyBuild:
     fullTypeName: PrechodSceny
     methodName: PrejdiNaCilovouScenu
   - assembly: Assembly-CSharp
+    fullTypeName: PrechodSceny
+    methodName: PrejdiNaCilovouScenu
+  - assembly: Assembly-CSharp
     fullTypeName: Play
     methodName: Zacni
+  - assembly: Assembly-CSharp
+    fullTypeName: PrechodSceny
+    methodName: PrejdiNaCilovouScenu
   - assembly: Assembly-CSharp
     fullTypeName: PrechodSceny
     methodName: PrejdiNaCilovouScenu
@@ -94,12 +101,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Username
     methodName: JmenoHrace
-  - assembly: Assembly-CSharp
-    fullTypeName: PrechodSceny
-    methodName: PrejdiNaCilovouScenu
-  - assembly: Assembly-CSharp
-    fullTypeName: PrechodSceny
-    methodName: PrejdiNaCilovouScenu
   - assembly: Assembly-CSharp
     fullTypeName: PrechodSceny
     methodName: PrejdiNaCilovouScenu
@@ -338,6 +339,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 23426}
     - Class: 114
       Script: {instanceID: 23482}
+    - Class: 114
+      Script: {instanceID: 26072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1604,6 +1607,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: c00a3b65772a1801905f575b4b113812
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ShowlLdbrd
   platform: 19
   scenePathNames:
   - Assets/Scenes/StartUpMenu.unity

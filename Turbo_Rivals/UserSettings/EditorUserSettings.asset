@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 5b01515f03035c0d0b085927147b5c441415402c797f2062787e4535b4b4376a
-      flags: 0
-    RecentlyUsedSceneGuid-1:
       value: 0209025206560b5e5e0f55744873064414164d7f2f2e2569742b4530b6e2376b
       flags: 0
-    RecentlyUsedSceneGuid-2:
+    RecentlyUsedSceneGuid-1:
       value: 530705525c04580b0f570f2344200944104e4e797a2e24322e2b4461bbb5373c
       flags: 0
-    RecentlyUsedSceneGuid-3:
+    RecentlyUsedSceneGuid-2:
       value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
       flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 0004515f07540b590857092613730d444f161b737478726228794462b4b13161
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-      value: 5254070306505b0a58080a7a402708441215402f2a7125337f2f186be4b2613a
-      flags: 0
-    RecentlyUsedSceneGuid-6:
+    RecentlyUsedSceneGuid-3:
       value: 57060c575050500b54595f7b49200b44144e497a2a2d74617e2d4d35bab9323e
       flags: 0
+    RecentlyUsedSceneGuid-4:
+      value: 5254070306505b0a58080a7a402708441215402f2a7125337f2f186be4b2613a
+      flags: 0
+    RecentlyUsedSceneGuid-5:
+      value: 0009055306020a0b5a0c0f7740210c4441164d7a787d7660747a4835b7b96169
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 0004515f07540b590857092613730d444f161b737478726228794462b4b13161
+      flags: 0
     RecentlyUsedSceneGuid-7:
-      value: 5750030451010a5d0e5c082141745d4440151e297e7f7e632f28486ae3b56269
+      value: 5b55560757035a0e58565d7747750a444e164a78792c2433797d1c35b6b4626a
       flags: 0
     RecentlyUsedSceneGuid-8:
-      value: 5602040552010b5e5c595e2113205c444f164d7d7d2d7036752c4e35bbb56d6a
+      value: 5750030451010a5d0e5c082141745d4440151e297e7f7e632f28486ae3b56269
       flags: 0
     RecentlyUsedSceneGuid-9:
-      value: 5b55560757035a0e58565d7747750a444e164a78792c2433797d1c35b6b4626a
+      value: 5602040552010b5e5c595e2113205c444f164d7d7d2d7036752c4e35bbb56d6a
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650

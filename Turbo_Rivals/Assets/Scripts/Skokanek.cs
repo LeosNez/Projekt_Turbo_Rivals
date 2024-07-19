@@ -30,7 +30,7 @@ public class Skokanek : MonoBehaviour
     {
         if (isOnSlope) return; // Pokud je ještì auto na rampì, neproveïte skok
         Rigidbody rb = GetComponent<Rigidbody>(); // Pøístup k Rigidbody vozidla
-        rb.AddForce(transform.forward * jumpDistance, ForceMode.Impulse); // Aplikace síly smìrem vpøed pro let po skoku. ForceMode.Impulse zajistí, že se ptovede hned
+        rb.AddForce(transform.forward * jumpDistance, ForceMode.Impulse); // Aplikace síly smìrem vpøed pro let po skoku. ForceMode.Impulse zajistí, že se provede hned
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); // Aplikace síly smìrem nahoru pro skok
     }
 }

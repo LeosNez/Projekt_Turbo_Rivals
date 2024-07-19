@@ -328,6 +328,7 @@
 "Assets/Scripts/Prekazky.cs"
 "Assets/Scripts/Quit.cs"
 "Assets/Scripts/SaveData.cs"
+"Assets/Scripts/ShowlLdbrd.cs"
 "Assets/Scripts/Skokanek.cs"
 "Assets/Scripts/SwitchCam.cs"
 "Assets/Scripts/Timer.cs"

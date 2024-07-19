@@ -12,6 +12,7 @@
 		<type fullname="Prekazky" preserve="nothing"/>
 		<type fullname="Quit" preserve="nothing"/>
 		<type fullname="SaveData" preserve="nothing"/>
+		<type fullname="ShowlLdbrd" preserve="nothing"/>
 		<type fullname="Skokanek" preserve="nothing"/>
 		<type fullname="SwitchCam" preserve="nothing"/>
 		<type fullname="Timer" preserve="nothing"/>

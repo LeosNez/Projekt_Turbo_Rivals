@@ -4,17 +4,11 @@ using UnityEngine.UI;
 
 public class Odpocitavani : MonoBehaviour
 {
-    public Canvas countdownCanvas; // Reference na Canvas pro odpoèítávání
-    public Text countdownText; // Reference na Text pro zobrazení odpoèítávání
-    public InputField inputField; // Reference na InputField
+    public Canvas countdownCanvas;
+    public Canvas guiCanvas;
+    public Text countdownText;
 
     void Start()
-    {
-        // Pøidání posluchaèe pro událost "End Edit" InputFieldu
-        inputField.onEndEdit.AddListener(delegate { StartCountdown(); });
-    }
-
-    public void StartCountdown()
     {
         // Aktivace Canvasu pro odpoèítávání
         countdownCanvas.gameObject.SetActive(true);
@@ -40,6 +34,8 @@ public class Odpocitavani : MonoBehaviour
 
         // Deaktivace Canvasu po odpoèítávání
         countdownCanvas.gameObject.SetActive(false);
+
+        guiCanvas.gameObject.SetActive(true);
 
         // Obnovení normální rychlosti hry
         Time.timeScale = 1f;

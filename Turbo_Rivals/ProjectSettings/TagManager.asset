@@ -11,6 +11,11 @@ TagManager:
   - Zataceni
   - Zrychleni
   - Slope
+  - Sipka
+  - Draha
+  - Checkpoint1
+  - Checkpoint2
+  - Checkpoint3
   layers:
   - Default
   - TransparentFX
