@@ -8,10 +8,13 @@ public class Odpocitavani : MonoBehaviour
     public Canvas guiCanvas;
     public Text countdownText;
 
+    public int countdown = 3;
+
+    public AudioSource readySet;
+    public AudioSource go;
+
     void Start()
     {
-        // Aktivace Canvasu pro odpoèítávání
-        countdownCanvas.gameObject.SetActive(true);
         // Spuštìní coroutine pro odpoèítávání
         StartCoroutine(CountdownCoroutine()); //Korutina v Unity je speciální typ metody, která mùže být asynchronnì spuštìna a provádìna po dobu nìkolika snímkù hry
     }
@@ -21,15 +24,16 @@ public class Odpocitavani : MonoBehaviour
         // Zastavení hry
         Time.timeScale = 0f;
 
-        int countdown = 3;
         while (countdown > 0)
         {
+            readySet.Play();
             countdownText.text = countdown.ToString();
             yield return new WaitForSecondsRealtime(1); // Toto klíèové slovo se používá k vrácení hodnoty z korutiny a doèasnému pozastavení jejího bìhu
             countdown--;
         }
 
         countdownText.text = "GO!";
+        go.gameObject.SetActive(true);
         yield return new WaitForSecondsRealtime(1);
 
         // Deaktivace Canvasu po odpoèítávání

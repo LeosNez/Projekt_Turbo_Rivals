@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 187d305b696499b4a908efb2b130e45f
+timeCreated: 1520964616
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102580
+  packageName: 3D Tire
+  packageVersion: 1.0
+  assetPath: Assets/Tire/Demo/DemoTire.unity
+  uploadId: 236315

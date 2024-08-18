@@ -4,18 +4,19 @@
 			<method name="Lead"/>
 			<method name="Lead"/>
 			<method name="Lead"/>
+			<method name="Lead"/>
+			<method name="Lead"/>
+			<method name="Lead"/>
 		</type>
 		<type fullname="Play">
 			<method name="Zacni"/>
 			<method name="Zacni"/>
 			<method name="Zacni"/>
 		</type>
+		<type fullname="PlayerName">
+			<method name="SavePlayerName"/>
+		</type>
 		<type fullname="PrechodSceny">
-			<method name="PrejdiNaCilovouScenu"/>
-			<method name="PrejdiNaCilovouScenu"/>
-			<method name="PrejdiNaCilovouScenu"/>
-			<method name="PrejdiNaCilovouScenu"/>
-			<method name="PrejdiNaCilovouScenu"/>
 			<method name="PrejdiNaCilovouScenu"/>
 			<method name="PrejdiNaCilovouScenu"/>
 			<method name="PrejdiNaCilovouScenu"/>
@@ -38,10 +39,17 @@
 		<type fullname="Quit">
 			<method name="GameEnd"/>
 		</type>
-		<type fullname="Username">
-			<method name="JmenoHrace"/>
-			<method name="JmenoHrace"/>
-			<method name="JmenoHrace"/>
+		<type fullname="ShowlLdbrd">
+			<method name="Off"/>
+			<method name="Off"/>
+			<method name="Off"/>
+			<method name="Off"/>
+			<method name="Show"/>
+			<method name="Show"/>
+			<method name="Show"/>
+			<method name="Show"/>
+			<method name="Show"/>
+			<method name="Show"/>
 		</type>
 	</assembly>
 </linker>

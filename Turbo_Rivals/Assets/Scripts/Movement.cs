@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
     public float maxRychlost = 200f;
     public float couvaciRychlost = 20f;
 
-    public float zataceniDrift = 80f;
+    public float zataceniDrift = 150f;
 
     public float turboAcceleration = 100f;
     private bool isTurboActive = false;
@@ -47,9 +47,12 @@ public class Movement : MonoBehaviour
 
     private Rigidbody rb;
 
+    private ChangeColor cC;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        cC = GetComponent<ChangeColor>();
     }
 
     void Update()
@@ -63,8 +66,11 @@ public class Movement : MonoBehaviour
             if (speedBoostTimer >= speedBoostDuration)
             {
                 maxRychlost = originalMaxSpeed;
+                zataceni = originalZataceni;
                 isSpeedBoostActive = false;
-                minAngle = -40f;
+                minAngle = -45f;
+                cC.caraV1.SetActive(false);
+                cC.caraV2.SetActive(false);
             }
         }
 
@@ -128,7 +134,6 @@ public class Movement : MonoBehaviour
         {
             isTurboActive = true;
             fire.gameObject.SetActive(true);
-
         }
         // Deaktivace turbo
         if (Input.GetKeyUp(KeyCode.T))
@@ -157,7 +162,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    void HandleMovement()
+    public void HandleMovement()
     {
         if (moveInput >= 0)
         {
@@ -176,39 +181,39 @@ public class Movement : MonoBehaviour
             aktualniRychlost += moveInput * couvaciRychlost * Time.deltaTime; // Couvání
             if (aktualniRychlost < -1)
             {
-                Zpatecka.text = "R"; // Na tachometru se ukáže "R"
+                Zpatecka.text = "R";
             }
         }
 
-        aktualniRychlost = Mathf.Clamp(aktualniRychlost, -maxRychlost, maxRychlost); // Tato funkce se stará o to, že první hodnota zùstane mezi druhou a třetí hodnotou kde druhá je min a třetí je max
+        aktualniRychlost = Mathf.Clamp(aktualniRychlost, -maxRychlost, maxRychlost);
 
-        transform.Translate(Vector3.forward * aktualniRychlost * Time.deltaTime); // Stará se o pohyb
+        transform.Translate(Vector3.forward * aktualniRychlost * Time.deltaTime);
 
         if (Mathf.Abs(moveInput) < 0.1f)
         {
-            aktualniRychlost = Mathf.Lerp(aktualniRychlost, 0f, Time.deltaTime); // Postupné zpomalování. Lerp se stará o plynulý pohyb. první hodnota v závorce je počátení hodnota, druhá hodnota je hodnota, na kterou se chceme dostat. Poslední zajišuje plynulý pohyb
+            aktualniRychlost = Mathf.Lerp(aktualniRychlost, 0f, Time.deltaTime);
         }
 
-        float rotation = rotateInput * zataceni * Time.deltaTime; // Nastavení rotace objektu při zatáčení
-        transform.Rotate(Vector3.up * rotation); // objekt se bude otáèeet po ose Y na základì rotace
+        float rotation = rotateInput * zataceni * Time.deltaTime * (aktualniRychlost / maxRychlost);
+        transform.Rotate(0, rotation, 0);
     }
 
     private void OnCollisionEnter(Collision col)
     {
-        moveInput = -moveInput;
-        rotateInput = -rotateInput;
-        aktualniRychlost = -aktualniRychlost / 2;
+
+        if (col.gameObject.CompareTag("Zabrana"))
+        {
+            aktualniRychlost = aktualniRychlost / 10 ;
+        }
+
+        if (col.gameObject.CompareTag("Pneu"))
+        {
+            aktualniRychlost = 0f;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Draha"))
-        {
-            moveInput = moveInput;
-            rotateInput = rotateInput;
-            aktualniRychlost = aktualniRychlost;
-        }
-
         // Zpomalení
         if (other.CompareTag("Kaluz") && !isSpeedBoostActive && !isAccBoostActive)
         {
@@ -216,6 +221,7 @@ public class Movement : MonoBehaviour
             originalMaxSpeed = maxRychlost;
             originalZataceni = zataceni;
 
+            zataceni = 200f;
             isSpeedBoostActive = true;
             maxRychlost = 100f;
             speedBoostTimer = 0f;

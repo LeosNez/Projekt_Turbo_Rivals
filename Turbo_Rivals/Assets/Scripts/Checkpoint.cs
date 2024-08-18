@@ -32,7 +32,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Checkpoint"))
         {
-            lastCheckpointPosition = new Vector3(other.transform.position.x, 2.867133f, other.transform.position.z);
+            lastCheckpointPosition = new Vector3(other.transform.position.x, 4.091284f, other.transform.position.z);
             lastCheckpointRotation = other.transform.rotation;
         }
 
@@ -43,14 +43,7 @@ public class Checkpoint : MonoBehaviour
 
         if (other.CompareTag("Checkpoint1"))
         {
-            if(counter == 0)
-            {
-                counter = 1;
-            }
-            else
-            {
-                ReturnToLastCheckpoint();
-            }
+            counter = 1;
         }
 
         if (other.CompareTag("Checkpoint2"))
@@ -71,7 +64,11 @@ public class Checkpoint : MonoBehaviour
             }
         }
 
-        //if, který když hráè objede checkpoint tak ho to vrátí na poslední projetý checkpoint s tím, že neprojel checkpoint
+        if (other.CompareTag("Checkpoint_exit"))
+        {
+            ReturnToLastCheckpoint();
+            UnityEngine.Debug.Log("Neprojel jsi checkpoint");
+        }
     }
 
     private void ReturnToLastCheckpoint()

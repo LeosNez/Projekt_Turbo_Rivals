@@ -10,6 +10,5 @@ public class PrechodSceny : MonoBehaviour
     public void PrejdiNaCilovouScenu()
     {
         SceneManager.LoadScene(Scena);
-        Time.timeScale = 1f;
     }
 }

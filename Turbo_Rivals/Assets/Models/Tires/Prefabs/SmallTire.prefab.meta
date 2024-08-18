@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 64da6db98cf5a92488627ecead800eb4
+timeCreated: 1521473367
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102580
+  packageName: 3D Tire
+  packageVersion: 1.0
+  assetPath: Assets/Tires/Prefabs/SmallTire.prefab
+  uploadId: 236315

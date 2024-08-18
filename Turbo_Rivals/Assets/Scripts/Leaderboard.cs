@@ -7,10 +7,10 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class Leaderboard : MonoBehaviour
 {
-    public Text textField;
+    public Text nameTextField; // Pøidejte Text komponentu pro jména
+    public Text timeTextField; // Pøidejte Text komponentu pro èasy
     public int lvlNum;
 
     public void Lead()
@@ -46,7 +46,7 @@ public class Leaderboard : MonoBehaviour
                     int.TryParse(timeParts[2], out int fractions))
                 {
                     // Vytvoøení TimeSpan objektu pro èas hráèe
-                    TimeSpan timeSpan = new TimeSpan(0, 0, minutes, seconds, fractions * 10);
+                    TimeSpan timeSpan = new TimeSpan(0, 0, minutes, seconds, fractions);
                     // Pøidání jména hráèe a jeho èasu do seznamu
                     playerTimes.Add(new Tuple<string, TimeSpan>(playerName, timeSpan));
                 }
@@ -54,23 +54,25 @@ public class Leaderboard : MonoBehaviour
         }
 
         // Seøazení hráèù podle èasu
-        playerTimes = playerTimes.OrderBy(pt => pt.Item2).ToList();
+        playerTimes = playerTimes.OrderBy(pt => pt.Item2).Take(5).ToList();
 
-        // Vytvoøení seznamu øetìzcù pro zobrazení v textovém poli
-        List<string> leaderboardEntries = new List<string>();
-        int leaderboardCount = 1;
+        // Vytvoøení seznamu øetìzcù pro zobrazení v textových polích
+        List<string> nameEntries = new List<string>();
+        List<string> timeEntries = new List<string>();
+
         foreach (var playerTime in playerTimes)
         {
-            // Sestavení textového zápisu pro každého hráèe (poøadí, jméno a èas)
-            string entry = $"{leaderboardCount}. {playerTime.Item1} {playerTime.Item2.Minutes:D2}:{playerTime.Item2.Seconds:D2}:{playerTime.Item2.Milliseconds / 10:D2}";
-            leaderboardEntries.Add(entry);
-            leaderboardCount++;
+            // Pøidání jména a èasu hráèe do pøíslušných seznamù
+            nameEntries.Add(playerTime.Item1);
+            timeEntries.Add($"{playerTime.Item2.Minutes:D2}:{playerTime.Item2.Seconds:D2}:{playerTime.Item2.Milliseconds:D2}");
         }
 
-        // Pøevedení seznamu øetìzcù na jediný øetìzec se znaky nového øádku
-        string leaderboardText = string.Join("\n", leaderboardEntries);
+        // Pøevedení seznamù øetìzcù na jediný øetìzec se znaky nového øádku
+        string nameText = string.Join("\n", nameEntries);
+        string timeText = string.Join("\n", timeEntries);
 
-        // Zobrazení leaderboardu v textovém poli
-        textField.text = leaderboardText;
+        // Zobrazení leaderboardu v textových polích
+        nameTextField.text = nameText;
+        timeTextField.text = timeText;
     }
 }

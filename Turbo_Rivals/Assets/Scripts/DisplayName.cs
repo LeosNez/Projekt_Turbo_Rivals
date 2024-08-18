@@ -3,24 +3,22 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DisplayName : MonoBehaviour
 {
-    public Text playerNameText;
+    public Text playerNameText; 
 
-    // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey("PlayerName"))
+        if (!string.IsNullOrEmpty(PlayerName.playerName))
         {
-            string playerName = PlayerPrefs.GetString("PlayerName");
-            playerNameText.text = playerName;
-            UnityEngine.Debug.Log("Player name displayed: " + playerName);
+            playerNameText.text = PlayerName.playerName;
         }
         else
         {
-            playerNameText.text = "Player: Unknown";
-            UnityEngine.Debug.LogWarning("No player name found in PlayerPrefs");
+            //SceneManager.LoadScene(6);
+            UnityEngine.Debug.Log("Zadej své uživatelské jméno");
         }
     }
 }

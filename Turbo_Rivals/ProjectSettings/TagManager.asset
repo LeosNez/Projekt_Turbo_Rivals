@@ -16,6 +16,12 @@ TagManager:
   - Checkpoint1
   - Checkpoint2
   - Checkpoint3
+  - Checkpoint_exit
+  - JedeMimo
+  - DobrySmer
+  - Olejik
+  - Zabrana
+  - Pneu
   layers:
   - Default
   - TransparentFX

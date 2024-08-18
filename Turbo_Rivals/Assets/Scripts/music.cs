@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class music : MonoBehaviour
 {
-    public AudioSource audioSource;  // AudioSource komponenta
+    public AudioSource Jede;
+    public AudioSource Stoji;
 
     void Update()
     {
-        // Kontrolujeme, jestli byla stisknuta klávesa (napø. klávesa "space")
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            audioSource.gameObject.SetActive(true);
+            Jede.gameObject.SetActive(true);
+            Stoji.gameObject.SetActive(false);
         }
 
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            audioSource.gameObject.SetActive(false);
+            Jede.gameObject.SetActive(false);
+            Stoji.gameObject.SetActive(true);
         }
     }
 }

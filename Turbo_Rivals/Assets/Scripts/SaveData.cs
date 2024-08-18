@@ -18,7 +18,7 @@ public class SaveData : MonoBehaviour
         string filePath = Path.Combine(Application.persistentDataPath, "Leaderboard_" + lvlNum + ".txt");
 
         // Otevøení souboru pro zápis
-        //true znamená, že data budou do souboru pøidáván
+        //true znamená, že data budou do souboru pøidávána
         StreamWriter writer = new StreamWriter(filePath, true);
 
         // Zápis dat do souboru
@@ -32,7 +32,6 @@ public class SaveData : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Zpomalení
         if (other.CompareTag("Player"))
         {
             SaveToFile();

@@ -1,14 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Prekazky : MonoBehaviour
 {
     private Rigidbody rb;
-
-    public float knockdownForce = 50f;
-
-    private bool isKnockedDown = false;
+    public float impactForce = 10f; // Síla nárazu, kterou chceme aplikovat na překážku
 
     void Start()
     {
@@ -17,19 +14,27 @@ public class Prekazky : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Check if the collision is with the player and if the obstacle hasn't been knocked down yet
-        if (collision.gameObject.CompareTag("Player") && !isKnockedDown)
+        if (collision.gameObject.CompareTag("Zabrana"))
         {
-            // Calculate the force direction
-            // collision.contacts[0].point je m�sto prvn�ho kontaktu p�i kolizi
-            Vector3 forceDirection = transform.position - collision.contacts[0].point;
+            // Získání vektoru rychlosti hráče
+            Vector3 velocity = rb.velocity;
 
-            // Apply force to the obstacle in the calculated direction
-            // forceDirection.normalized zajist�, �e s�la bude aplikov�na ve spr�vn�m sm�ru s jednotkovou d�lkou
-            rb.AddForce(forceDirection.normalized * knockdownForce, ForceMode.Impulse);
+            // Získání normály povrchu při nárazu
+            Vector3 normal = collision.contacts[0].normal;
 
-            // Set the obstacle as knocked down
-            isKnockedDown = true;
+            // Výpočet odraženého vektoru
+            Vector3 reflectedVelocity = velocity - 2 * Vector3.Dot(velocity, normal) * normal;
+
+            // Aplikace odraženého vektoru jako nové rychlosti hráče
+            rb.velocity = reflectedVelocity;
+
+            // Kontrola, zda má překážka Rigidbody (aby se mohla hýbat)
+            Rigidbody obstacleRb = collision.collider.GetComponent<Rigidbody>();
+            if (obstacleRb != null)
+            {
+                // Aplikace síly na překážku ve směru rychlosti hráče při nárazu
+                obstacleRb.AddForce(velocity.normalized * impactForce, ForceMode.Impulse);
+            }
         }
     }
 }
