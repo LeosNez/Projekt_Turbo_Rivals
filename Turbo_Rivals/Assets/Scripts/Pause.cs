@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
-    public GameObject canvas;
+    public GameObject Canvas;
 
     void Update()
     {
@@ -18,9 +18,9 @@ public class Pause : MonoBehaviour
     {
         Time.timeScale = 0f;
 
-        if (canvas != null)
+        if (Canvas != null)
         {
-            canvas.gameObject.SetActive(true);
+            Canvas.gameObject.SetActive(true);
         }
     }
 }

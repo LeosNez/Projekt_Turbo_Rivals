@@ -49,16 +49,26 @@ public class Movement : MonoBehaviour
 
     private ChangeColor cC;
 
+    private Olej o;
+
+    public Transform FrontLeftWheel;
+    public Transform FrontRightWheel;
+    public float MaxSteerAngle = 30f;
+    private float _currentSteerAngle;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         cC = GetComponent<ChangeColor>();
+        o = GetComponent<Olej>();
     }
 
     void Update()
     {
         ReadInput();
         HandleMovement();
+        Steer();
 
         if (isSpeedBoostActive)
         {
@@ -69,8 +79,8 @@ public class Movement : MonoBehaviour
                 zataceni = originalZataceni;
                 isSpeedBoostActive = false;
                 minAngle = -45f;
-                cC.caraV1.SetActive(false);
-                cC.caraV2.SetActive(false);
+                cC.CaraV1.SetActive(false);
+                cC.CaraV2.SetActive(false);
             }
         }
 
@@ -93,10 +103,11 @@ public class Movement : MonoBehaviour
                 isAccBoostActive = false;
             }
         }
-
+        // Převede rychlost na hodnotu mezi 0 a 1
         float normalizedSpeed = Mathf.Clamp01(aktualniRychlost / maxRychlost);
-        float angle = Mathf.Lerp(maxAngle, minAngle, normalizedSpeed);
-
+        // Spočítá úhel ručičky na základě normalizedSpeed
+        float angle = Mathf.Lerp(maxAngle, minAngle, normalizedSpeed); 
+        // Nastaví úhel ručičky tachometru podle vypo
         needle.localRotation = Quaternion.Euler(0f, 0f, angle); //x, y, z
     }
 
@@ -184,18 +195,25 @@ public class Movement : MonoBehaviour
                 Zpatecka.text = "R";
             }
         }
-
-        aktualniRychlost = Mathf.Clamp(aktualniRychlost, -maxRychlost, maxRychlost);
-
+        // Udržuje aktuální rychlost mezi hodnotami maxRaychlost a -maxRychlost
+        aktualniRychlost = Mathf.Clamp(aktualniRychlost, -maxRychlost, maxRychlost); 
+        // Stará se o pohyb
         transform.Translate(Vector3.forward * aktualniRychlost * Time.deltaTime);
-
+        // Pokud nezrychluje, tak postupně zpomaluje do úplného zastavení
         if (Mathf.Abs(moveInput) < 0.1f)
         {
             aktualniRychlost = Mathf.Lerp(aktualniRychlost, 0f, Time.deltaTime);
         }
-
+        // Zatáčení
         float rotation = rotateInput * zataceni * Time.deltaTime * (aktualniRychlost / maxRychlost);
         transform.Rotate(0, rotation, 0);
+    }
+
+    private void Steer()
+    {
+        _currentSteerAngle = MaxSteerAngle * rotateInput;
+        FrontLeftWheel.localRotation = Quaternion.Euler(0, _currentSteerAngle - 90, 0);
+        FrontRightWheel.localRotation = Quaternion.Euler(0, _currentSteerAngle - 90, 0);
     }
 
     private void OnCollisionEnter(Collision col)
@@ -203,7 +221,7 @@ public class Movement : MonoBehaviour
 
         if (col.gameObject.CompareTag("Zabrana"))
         {
-            aktualniRychlost = aktualniRychlost / 10 ;
+            aktualniRychlost = aktualniRychlost / 10;
         }
 
         if (col.gameObject.CompareTag("Pneu"))

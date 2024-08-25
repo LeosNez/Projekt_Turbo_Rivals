@@ -9,9 +9,9 @@ using UnityEngine.UI;
 
 public class Leaderboard : MonoBehaviour
 {
-    public Text nameTextField; // Pøidejte Text komponentu pro jména
-    public Text timeTextField; // Pøidejte Text komponentu pro èasy
-    public int lvlNum;
+    public Text NameTextField;
+    public Text TimeTextField;
+    public int LvlNum;
 
     public void Lead()
     {
@@ -19,7 +19,7 @@ public class Leaderboard : MonoBehaviour
         List<Tuple<string, TimeSpan>> playerTimes = new List<Tuple<string, TimeSpan>>();
 
         // Cesta k textovému souboru Leaderboardu urèenému pro konkrétní úroveò (lvlNum)
-        string filePath = Path.Combine(Application.persistentDataPath, "Leaderboard_" + lvlNum + ".txt");
+        string filePath = Path.Combine(Application.persistentDataPath, "Leaderboard_" + LvlNum + ".txt");
 
         // Naètení všech øádkù textového souboru do pole øetìzcù
         string[] lines = File.ReadAllLines(filePath);
@@ -72,7 +72,7 @@ public class Leaderboard : MonoBehaviour
         string timeText = string.Join("\n", timeEntries);
 
         // Zobrazení leaderboardu v textových polích
-        nameTextField.text = nameText;
-        timeTextField.text = timeText;
+        NameTextField.text = nameText;
+        TimeTextField.text = timeText;
     }
 }

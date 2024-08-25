@@ -43,15 +43,15 @@
                 "m_Settings": {
                     "UxmlGuid": "88112d39389468242ab4641e39ab7a53",
                     "UxmlPath": "Assets/UI Toolkit/Menu.uxml",
-                    "CanvasX": -1310,
-                    "CanvasY": -713,
-                    "CanvasWidth": 2855,
-                    "CanvasHeight": 2413,
+                    "CanvasX": -888,
+                    "CanvasY": -496,
+                    "CanvasWidth": 2979,
+                    "CanvasHeight": 2427,
                     "MatchGameView": false,
-                    "ZoomScale": 0.30000001192092898,
+                    "ZoomScale": 0.25,
                     "PanOffset": {
-                        "x": 415.1615295410156,
-                        "y": 247.65228271484376
+                        "x": 245.98153686523438,
+                        "y": 267.8132629394531
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,

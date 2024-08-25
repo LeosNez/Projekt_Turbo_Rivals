@@ -7,13 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class DisplayName : MonoBehaviour
 {
-    public Text playerNameText; 
+    public Text PlayerNameText; 
 
     void Start()
     {
-        if (!string.IsNullOrEmpty(PlayerName.playerName))
+        if (!string.IsNullOrEmpty(PlayerName.PlyrName))
         {
-            playerNameText.text = PlayerName.playerName;
+            PlayerNameText.text = PlayerName.PlyrName;
         }
         else
         {

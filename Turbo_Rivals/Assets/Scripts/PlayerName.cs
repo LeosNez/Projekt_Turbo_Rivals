@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class PlayerName : MonoBehaviour
 {
-    public static string playerName;
-    public InputField inputField;
+    public static string PlyrName;
+    public InputField InputField;
 
     public void SavePlayerName()
     {
-        playerName = inputField.text;
+        PlyrName = InputField.text;
     }
 }

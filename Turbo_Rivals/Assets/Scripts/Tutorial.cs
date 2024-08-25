@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
-    public Text tutorialText;
-    public GameObject canvas;
+    public Text TutorialText;
+    public GameObject Canvas;
 
-    private int currentStep = 0;
+    private int _currentStep = 0;
 
     void Start()
     {
@@ -17,63 +17,63 @@ public class Tutorial : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && currentStep == 0)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && _currentStep == 0)
         {
-            currentStep++;
+            _currentStep++;
             DisplayInstructions();
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) && currentStep == 1)
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && _currentStep == 1)
         {
-            currentStep++;
+            _currentStep++;
             DisplayInstructions();
         }
-        else if (Input.GetKey(KeyCode.LeftArrow) && currentStep == 2)
+        else if (Input.GetKey(KeyCode.LeftArrow) && _currentStep == 2)
         {
-            currentStep++;
+            _currentStep++;
             DisplayInstructions();
         }
-        else if (Input.GetKey(KeyCode.RightArrow) && currentStep == 3)
+        else if (Input.GetKey(KeyCode.RightArrow) && _currentStep == 3)
         {
-            currentStep++;
+            _currentStep++;
             DisplayInstructions();
         }
-        else if (Input.GetKey(KeyCode.T) && currentStep == 4)
+        else if (Input.GetKey(KeyCode.T) && _currentStep == 4)
         {
-            currentStep++;
+            _currentStep++;
             DisplayInstructions();
         }
-        else if (Input.GetKey(KeyCode.S) && currentStep == 5)
+        else if (Input.GetKey(KeyCode.S) && _currentStep == 5)
         {
-            currentStep++;
+            _currentStep++;
             DisplayInstructions();
         }
     }
 
     void DisplayInstructions()
     {
-        switch (currentStep)
+        switch (_currentStep)
         {
             case 0:
-                tutorialText.text = "Vítej u tutorialu. Napøed zkus popojed dopøedu tak, že zmáèkneš šipku dopøedu.";
+                TutorialText.text = "Vítej u tutorialu. Napøed zkus popojed dopøedu tak, že zmáèkneš šipku dopøedu.";
                 break;
             case 1:
-                tutorialText.text = "Skvìle! Teï si zkusíme couvání. To udìláš tím, že zmáèkneš šipku zpìt.";
+                TutorialText.text = "Skvìle! Teï si zkusíme couvání. To udìláš tím, že zmáèkneš šipku zpìt.";
                 break;
             case 2:
-                tutorialText.text = "Nyní se rozjeï dopøedu nebo dozadu a u toho zkus zatoèit doleva tak, že bìhem toho co je tvé auto v pohybu zmáèkneš šipku doleva.";
+                TutorialText.text = "Nyní se rozjeï dopøedu nebo dozadu a u toho zkus zatoèit doleva tak, že bìhem toho co je tvé auto v pohybu zmáèkneš šipku doleva.";
                 break;
             case 3:
-                tutorialText.text = "A nyní zkus zatoèit doprava";
+                TutorialText.text = "A nyní zkus zatoèit doprava";
                 break;
             case 4:
-                tutorialText.text = "Pro zrychlení stisknìte T";
+                TutorialText.text = "Pro zrychlení stisknìte T";
                 break;
             case 5:
-                tutorialText.text = "Teï zkus smyk pomocí S";
+                TutorialText.text = "Teï zkus smyk pomocí S";
                 break;
             default:
-                tutorialText.text = "Blahopøeji! úspìšnì si prošel tutorialem :)";
-                canvas.SetActive(true);
+                TutorialText.text = "Blahopøeji! úspìšnì si prošel tutorialem :)";
+                Canvas.SetActive(true);
                 break;
         }
     }

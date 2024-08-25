@@ -5,7 +5,7 @@ using UnityEngine;
 public class Prekazky : MonoBehaviour
 {
     private Rigidbody rb;
-    public float impactForce = 10f; // Síla nárazu, kterou chceme aplikovat na překážku
+    public float ImpactForce = 10f; // Síla nárazu, kterou chceme aplikovat na překážku
 
     void Start()
     {
@@ -33,7 +33,7 @@ public class Prekazky : MonoBehaviour
             if (obstacleRb != null)
             {
                 // Aplikace síly na překážku ve směru rychlosti hráče při nárazu
-                obstacleRb.AddForce(velocity.normalized * impactForce, ForceMode.Impulse);
+                obstacleRb.AddForce(velocity.normalized * ImpactForce, ForceMode.Impulse);
             }
         }
     }

@@ -4,14 +4,14 @@ using UnityEngine.UI;
 
 public class Odpocitavani : MonoBehaviour
 {
-    public Canvas countdownCanvas;
-    public Canvas guiCanvas;
-    public Text countdownText;
+    public Canvas CountdownCanvas;
+    public Canvas GuiCanvas;
+    public Text CountdownText;
 
-    public int countdown = 3;
+    public int Countdown = 3;
 
-    public AudioSource readySet;
-    public AudioSource go;
+    public AudioSource ReadySet;
+    public AudioSource Go;
 
     void Start()
     {
@@ -24,22 +24,22 @@ public class Odpocitavani : MonoBehaviour
         // Zastavení hry
         Time.timeScale = 0f;
 
-        while (countdown > 0)
+        while (Countdown > 0)
         {
-            readySet.Play();
-            countdownText.text = countdown.ToString();
+            ReadySet.Play();
+            CountdownText.text = Countdown.ToString();
             yield return new WaitForSecondsRealtime(1); // Toto klíèové slovo se používá k vrácení hodnoty z korutiny a doèasnému pozastavení jejího bìhu
-            countdown--;
+            Countdown--;
         }
 
-        countdownText.text = "GO!";
-        go.gameObject.SetActive(true);
+        CountdownText.text = "GO!";
+        Go.gameObject.SetActive(true);
         yield return new WaitForSecondsRealtime(1);
 
         // Deaktivace Canvasu po odpoèítávání
-        countdownCanvas.gameObject.SetActive(false);
+        CountdownCanvas.gameObject.SetActive(false);
 
-        guiCanvas.gameObject.SetActive(true);
+        GuiCanvas.gameObject.SetActive(true);
 
         // Obnovení normální rychlosti hry
         Time.timeScale = 1f;

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Olej : MonoBehaviour
 {
-    public float rotationDuration = 10f;
-    private bool isRotating = false;
+    public float RotationDuration = 10f;
+    public bool IsRotating = false;
 
     private ChangeColor cC;
 
@@ -16,15 +16,15 @@ public class Olej : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Olejik") && !isRotating)
+        if (other.CompareTag("Olejik") && !IsRotating)
         {
-            StartCoroutine(RotateAroundY(2, rotationDuration));  // Spustí otoèení dvakrát kolem osy Y
+            StartCoroutine(RotateAroundY(2, RotationDuration));  // Spustí otoèení dvakrát kolem osy Y
         }
     }
 
     private IEnumerator RotateAroundY(int rotations, float duration)
     {
-        isRotating = true;
+        IsRotating = true;
         float totalRotation = 180 * rotations;  // Celkový úhel otoèení
         float rotationSpeed = totalRotation / duration;  // Rychlost otoèení (stupnì za sekundu)
 
@@ -37,8 +37,8 @@ public class Olej : MonoBehaviour
             yield return null;  // Èeká do dalšího framu
         }
 
-        isRotating = false;
-        cC.caraO1.SetActive(false);
-        cC.caraO2.SetActive(false);
+        IsRotating = false;
+        cC.CaraO1.SetActive(false);
+        cC.CaraO2.SetActive(false);
     }
 }

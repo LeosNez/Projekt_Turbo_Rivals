@@ -6,16 +6,16 @@ using UnityEngine.UI;
 
 public class Checkpoint : MonoBehaviour
 {
-    public Vector3 lastCheckpointPosition;
-    public Quaternion lastCheckpointRotation;
+    public Vector3 LastCheckpointPosition;
+    public Quaternion LastCheckpointRotation;
 
-    public int counter = 0;
-    public Text count;
+    public int Counter = 0;
+    public Text Count_txt;
 
     void Start()
     {
-        lastCheckpointPosition = transform.position;
-        lastCheckpointRotation = transform.rotation;
+        LastCheckpointPosition = transform.position;
+        LastCheckpointRotation = transform.rotation;
     }
 
     void Update()
@@ -25,15 +25,15 @@ public class Checkpoint : MonoBehaviour
             ReturnToLastCheckpoint();
         }
 
-        count.text = counter.ToString();
+        Count_txt.text = Counter.ToString();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Checkpoint"))
         {
-            lastCheckpointPosition = new Vector3(other.transform.position.x, 4.091284f, other.transform.position.z);
-            lastCheckpointRotation = other.transform.rotation;
+            LastCheckpointPosition = new Vector3(other.transform.position.x, 4.091284f, other.transform.position.z);
+            LastCheckpointRotation = other.transform.rotation;
         }
 
         if (other.CompareTag("Respawn"))
@@ -43,22 +43,22 @@ public class Checkpoint : MonoBehaviour
 
         if (other.CompareTag("Checkpoint1"))
         {
-            counter = 1;
+            Counter = 1;
         }
 
         if (other.CompareTag("Checkpoint2"))
         {
-            counter = 2;
+            Counter = 2;
         }
 
         if (other.CompareTag("Checkpoint3"))
         {
-            counter = 3;
+            Counter = 3;
         }
 
         if (other.CompareTag("Finish"))
         {
-            if (counter != 3)
+            if (Counter != 3)
             {
                 UnityEngine.Debug.Log("Neprojel jsi všechny checkpointy, budeš se muset vrátit :(");
             }
@@ -73,7 +73,7 @@ public class Checkpoint : MonoBehaviour
 
     private void ReturnToLastCheckpoint()
     {
-        transform.position = lastCheckpointPosition;
-        transform.rotation = lastCheckpointRotation;
+        transform.position = LastCheckpointPosition;
+        transform.rotation = LastCheckpointRotation;
     }
 }

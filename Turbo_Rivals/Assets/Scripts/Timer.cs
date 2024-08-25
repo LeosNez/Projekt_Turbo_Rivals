@@ -6,21 +6,21 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeRemaining = 0;
-    public bool timeIsRunning = true;
+    public float TimeRemaining = 0;
+    public bool TimeIsRunning = true;
     public Text Time_txt;
 
     void Start()
     {
-        timeIsRunning = true;
+        TimeIsRunning = true;
     }
 
     void Update()
     {
-        if (timeIsRunning)
+        if (TimeIsRunning)
         {
-            timeRemaining += Time.deltaTime;
-            DisplayTime(timeRemaining);
+            TimeRemaining += Time.deltaTime;
+            DisplayTime(TimeRemaining);
         }
     }
 

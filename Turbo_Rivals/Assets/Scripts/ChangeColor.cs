@@ -5,24 +5,32 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
 {
-    public GameObject caraV1;
-    public GameObject caraV2;
+    public GameObject CaraV1;
+    public GameObject CaraV2;
 
-    public GameObject caraO1;
-    public GameObject caraO2;
+    public GameObject CaraO1;
+    public GameObject CaraO2;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Kaluz"))
         {
-            caraV1.SetActive(true);
-            caraV2.SetActive(true);
+            CaraV1.SetActive(true);
+            CaraV2.SetActive(true);
         }
 
         if (other.CompareTag("Olejik"))
         {
-            caraO1.SetActive(true);
-            caraO2.SetActive(true);
+            CaraO1.SetActive(true);
+            CaraO2.SetActive(true);
+        }
+
+        if (other.CompareTag("Respawn"))
+        {
+            CaraV1.SetActive(false);
+            CaraV2.SetActive(false);
+            CaraO1.SetActive(false);
+            CaraO2.SetActive(false);
         }
     }
 }

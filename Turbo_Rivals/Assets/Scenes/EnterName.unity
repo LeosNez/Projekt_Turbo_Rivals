@@ -392,8 +392,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -135.3, y: -4.8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -135.3, y: -7.3144}
+  m_SizeDelta: {x: 160, y: 34.2288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522490510
 MonoBehaviour:
@@ -428,7 +428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "U\u017Eivatelsk\xE9 jm\xE9no:"
+  m_Text: "U\u017Eivatelsk\xE9 jm\xE9no:\n(1-8 znak\u016F)"
 --- !u!222 &522490511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf1fad5563ea7e4c82fc574b5ad0cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 138476514}
+  InputField: {fileID: 138476514}
 --- !u!1 &2080921957
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Play : MonoBehaviour
 {
-    public GameObject canvas;
+    public GameObject Canvas;
 
     public void Zacni()
     {
-        canvas.SetActive(false);
+        Canvas.SetActive(false);
         Time.timeScale = 1f;
     }
 }

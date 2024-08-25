@@ -2,29 +2,49 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Radio : MonoBehaviour
 {
-    public AudioSource radioSource;
+    public AudioSource RadioSource;
+    public AudioClip[] ListSongu;
 
-    public AudioClip[] listSongu;
+    public Toggle myToggle;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //AudioClip randomClip = listSongu[UnityEngine.Random.Range(0, listSongu.Length)];
-
-        //radioSource.PlayOneShot(randomClip);
+        // Naètení stavu Toggle pøi startu hry
+        if (PlayerPrefs.HasKey("ToggleState"))
+        {
+            myToggle.isOn = PlayerPrefs.GetInt("ToggleState") == 1;
+        }
+        else
+        {
+            myToggle.isOn = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!radioSource.isPlaying)
+        if (!RadioSource.isPlaying)
         {
-            AudioClip randomClip = listSongu[UnityEngine.Random.Range(0, listSongu.Length)];
+            AudioClip randomClip = ListSongu[UnityEngine.Random.Range(0, ListSongu.Length)];
 
-            radioSource.PlayOneShot(randomClip);
+            RadioSource.PlayOneShot(randomClip);
         }
+    }
+
+    void OnDisable()
+    {
+        // Uložení stavu Toggle pøi deaktivaci objektu (napø. pøi zmìnì scény)
+        SaveToggleState();
+    }
+
+    void SaveToggleState()
+    {
+        // Uložení stavu Toggle (1 pokud je zapnutý, 0 pokud je vypnutý)
+        PlayerPrefs.SetInt("ToggleState", myToggle.isOn ? 1 : 0);
+        PlayerPrefs.Save(); // Volitelnì mùžete zavolat Save() pro zajištìní okamžitého uložení
     }
 }

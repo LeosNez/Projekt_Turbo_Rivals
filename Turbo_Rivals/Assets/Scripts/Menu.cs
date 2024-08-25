@@ -4,14 +4,14 @@ using UnityEngine.UIElements;
 
 public class Menu : MonoBehaviour
 {
-    private UIDocument uiDocument;
+    private UIDocument _uiDocument;
 
     void Start()
     {
-        uiDocument = GetComponent<UIDocument>();
+        _uiDocument = GetComponent<UIDocument>();
 
         // Získání root vizuálního stromu z UI dokumentu
-        var rootVisualElement = uiDocument.rootVisualElement;
+        var rootVisualElement = _uiDocument.rootVisualElement;
 
         // Najdìte tlaèítko podle jeho jména (podle jména z UXML)
         Button tutButton = rootVisualElement.Q<Button>("Tutorial");

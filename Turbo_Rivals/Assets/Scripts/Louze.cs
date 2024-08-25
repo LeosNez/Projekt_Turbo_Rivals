@@ -8,6 +8,7 @@ public class Louze : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Když vjede hhráè do louže, tak se tam spawnou kulièky (kapky vody)
         if (other.CompareTag("Kaluz"))
         {
             for (int i = 0; i < 5; i++)

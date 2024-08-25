@@ -7,17 +7,17 @@ using UnityEngine.UI;
 
 public class BestTime : MonoBehaviour
 {
-    public Text textField;
-    public int lvlNum;
+    public Text TextField;
+    public int LvlNum;
 
     void Start()
     {
-        string filePath = Path.Combine(Application.persistentDataPath, "Leaderboard_" + lvlNum + ".txt");
+        string filePath = Path.Combine(Application.persistentDataPath, "Leaderboard_" + LvlNum + ".txt");
 
         string text = File.ReadAllText(filePath);
         string bestTime = FindBestTime(text);
 
-        textField.text = bestTime;
+        TextField.text = bestTime;
     }
 
     string FindBestTime(string text)

@@ -8,21 +8,21 @@ using UnityEngine.UI;
 public class SaveData : MonoBehaviour
 {
     public Text Cas;
-    public Text jmeno;
-    public int lvlNum;
+    public Text Jmeno;
+    public int LvlNum;
 
     public void SaveToFile()
     {
         // Application.persistentDataPath poskytuje cestu k úložišti aplikace
         // Path.Combine bezpeènì sestaví cestu z rùzných èástí, aby se pøedešlo problémùm s formátováním cesty
-        string filePath = Path.Combine(Application.persistentDataPath, "Leaderboard_" + lvlNum + ".txt");
+        string filePath = Path.Combine(Application.persistentDataPath, "Leaderboard_" + LvlNum + ".txt");
 
         // Otevøení souboru pro zápis
         //true znamená, že data budou do souboru pøidávána
         StreamWriter writer = new StreamWriter(filePath, true);
 
         // Zápis dat do souboru
-        writer.WriteLine(jmeno.text + " " + Cas.text);
+        writer.WriteLine(Jmeno.text + " " + Cas.text);
 
         // Uzavøení souboru
         writer.Close();

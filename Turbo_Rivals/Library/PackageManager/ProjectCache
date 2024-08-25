@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638405840850886616
-    m_Hash: 1224885817
+      ticks: 638598711266371147
+    m_Hash: 1725131806
   m_LockFileStatus:
     m_FilePath: "C:/Users/42073/OneDrive/Plocha/Ro\u010Dn\xEDkovka/Projekt_Turbo_Rivals/Turbo_Rivals/Packages/packages-lock.json"
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638405840850926853
-    m_Hash: 1991421299
+      ticks: 638598711266409132
+    m_Hash: 3163019720
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -56,6 +56,7 @@ m_ResolvedPackages:
     - 2.0.0-pre.3
     - 2.0.0-pre.4
     - 2.0.0
+    - 2.0.3
     compatible:
     - 1.1.4
     - 1.1.5
@@ -195,9 +196,15 @@ m_ResolvedPackages:
     - 2.1.0-preview.6
     - 2.1.0
     - 2.2.0
+    - 2.3.1
+    - 2.4.3
+    - 2.4.4
     compatible:
     - 2.1.0
     - 2.2.0
+    - 2.3.1
+    - 2.4.3
+    - 2.4.4
     recommended: 2.1.0
     deprecated: []
   dependencies: []
@@ -308,7 +315,7 @@ m_ResolvedPackages:
     version: default
   resolvedDependencies:
   - name: com.unity.ide.visualstudio
-    version: 2.0.21
+    version: 2.0.22
   - name: com.unity.test-framework
     version: 1.3.9
   - name: com.unity.ext.nunit
@@ -425,11 +432,15 @@ m_ResolvedPackages:
     - 3.0.25
     - 3.0.26
     - 3.0.27
+    - 3.0.28
+    - 3.0.31
     compatible:
     - 3.0.25
     - 3.0.26
     - 3.0.27
-    recommended: 3.0.27
+    - 3.0.28
+    - 3.0.31
+    recommended: 3.0.31
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit
@@ -473,12 +484,12 @@ m_ResolvedPackages:
     installations and open solution and file in Rider"}'
   assetStore:
     productId: 
-- packageId: com.unity.ide.visualstudio@2.0.21
+- packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 1
-  version: 2.0.21
+  version: 2.0.22
   source: 1
-  resolvedPath: "C:\\Users\\42073\\OneDrive\\Plocha\\Ro\u010Dn\xEDkovka\\Projekt_Turbo_Rivals\\Turbo_Rivals\\Library\\PackageCache\\com.unity.ide.visualstudio@2.0.21"
+  resolvedPath: "C:\\Users\\42073\\OneDrive\\Plocha\\Ro\u010Dn\xEDkovka\\Projekt_Turbo_Rivals\\Turbo_Rivals\\Library\\PackageCache\\com.unity.ide.visualstudio@2.0.22"
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -549,13 +560,13 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638300315250000000
+  datePublishedTicks: 638326061910000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.visualstudio@2.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-    revision: eb2b500b99f6429d3d9dcb8acbcbd366dfbb42be
+    revision: 700b44077345e97d37d464ff25507638983aed64
     path: 
   unityLifecycle:
     version: 2.0.21
@@ -568,14 +579,12 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"Integration:\n\n- Only disable the legacy `com.unity.ide.vscode`
-    package going forward.\n- Fix json parsing issues with specific non-UTF code
-    pages.\n\nProject generation:\n\n- Target `netstandard2.1` instead of `netstandard2.0`.\n-
-    Set `defaultSolution` in `settings.json`.\n- Remove `files.exclude` entries for
-    root `csproj` and `sln` files in `settings.json` when needed.\n- Add `vstuc`
-    launch configuration to `launch.json` when needed.\n- Add `visualstudiotoolsforunity.vstuc`
-    entry to `extensions.json` when needed.\n- You can prevent the package from patching
-    those configuration files by creating a `.vscode/.vstupatchdisable` file."}'
+  upmReserved: '{"changelog":"Integration:\n\n- Add support for `XDG_DATA_DIRS` and
+    `.desktop` files on Linux for `VS Code` discovery.\n- Use compile-time platform-specifics
+    instead of using runtime conditions.\n\nProject generation:\n\n- Suppress `USG0001`
+    warnings.\n- Mark referenced assemblies as private (to not copy extra files to
+    output directory when building).\n- Add Unity capability to SDK-Style projects.\n-
+    Prevent circular dependency errors with SDK-Style projects."}'
   assetStore:
     productId: 
 - packageId: com.unity.ide.vscode@1.2.5
@@ -734,6 +743,8 @@ m_ResolvedPackages:
     - 1.4.1
     - 1.4.2
     - 1.4.3
+    - 1.4.4
+    - 1.4.5
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -744,6 +755,8 @@ m_ResolvedPackages:
     - 1.4.1
     - 1.4.2
     - 1.4.3
+    - 1.4.4
+    - 1.4.5
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -927,6 +940,8 @@ m_ResolvedPackages:
     - 3.0.5
     - 3.0.6
     - 3.0.7
+    - 3.0.8
+    - 3.0.9
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
@@ -934,11 +949,16 @@ m_ResolvedPackages:
     - 3.2.0-pre.5
     - 3.2.0-pre.6
     - 3.2.0-pre.7
+    - 3.2.0-pre.8
+    - 3.2.0-pre.9
+    - 3.2.0-pre.10
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     compatible:
     - 3.0.6
     - 3.0.7
+    - 3.0.8
+    - 3.0.9
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
@@ -946,9 +966,12 @@ m_ResolvedPackages:
     - 3.2.0-pre.5
     - 3.2.0-pre.6
     - 3.2.0-pre.7
+    - 3.2.0-pre.8
+    - 3.2.0-pre.9
+    - 3.2.0-pre.10
     - 4.0.0-pre.1
     - 4.0.0-pre.2
-    recommended: 3.0.7
+    recommended: 3.0.9
     deprecated: []
   dependencies:
   - name: com.unity.ugui
@@ -1106,13 +1129,15 @@ m_ResolvedPackages:
     - 1.8.4
     - 1.8.5
     - 1.8.6
+    - 1.8.7
     compatible:
     - 1.8.2
     - 1.8.3
     - 1.8.4
     - 1.8.5
     - 1.8.6
-    recommended: 1.8.6
+    - 1.8.7
+    recommended: 1.8.7
     deprecated: []
   dependencies:
   - name: com.unity.modules.director
@@ -1200,6 +1225,7 @@ m_ResolvedPackages:
     - 1.0.0
     - 3.0.0-exp.1
     - 3.0.0-exp.3
+    - 3.0.0-exp.4
     compatible:
     - 1.0.0
     recommended: 1.0.0
@@ -1303,10 +1329,14 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.9.0
     - 1.9.1
+    - 1.9.2
+    - 1.9.4
     compatible:
     - 1.8.0
     - 1.9.0
     - 1.9.1
+    - 1.9.2
+    - 1.9.4
     recommended: 1.8.0
     deprecated:
     - 1.8.0-pre.1
@@ -3801,10 +3831,12 @@ m_ResolvedPackages:
     - 1.2.3
     - 1.2.4
     - 1.2.5
+    - 1.2.6
     compatible:
     - 1.2.4
     - 1.2.5
-    recommended: 1.2.5
+    - 1.2.6
+    recommended: 1.2.6
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
