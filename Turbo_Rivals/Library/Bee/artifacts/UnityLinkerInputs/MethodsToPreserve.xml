@@ -5,10 +5,9 @@
 			<method name="Lead"/>
 			<method name="Lead"/>
 			<method name="Lead"/>
-			<method name="Lead"/>
-			<method name="Lead"/>
 		</type>
 		<type fullname="Play">
+			<method name="Zacni"/>
 			<method name="Zacni"/>
 			<method name="Zacni"/>
 			<method name="Zacni"/>
@@ -35,21 +34,33 @@
 			<method name="PrejdiNaCilovouScenu"/>
 			<method name="PrejdiNaCilovouScenu"/>
 			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
+			<method name="PrejdiNaCilovouScenu"/>
 		</type>
 		<type fullname="Quit">
 			<method name="GameEnd"/>
 		</type>
 		<type fullname="ShowlLdbrd">
 			<method name="Off"/>
-			<method name="Off"/>
-			<method name="Off"/>
-			<method name="Off"/>
 			<method name="Show"/>
 			<method name="Show"/>
 			<method name="Show"/>
 			<method name="Show"/>
-			<method name="Show"/>
-			<method name="Show"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
 		</type>
 	</assembly>
 </linker>

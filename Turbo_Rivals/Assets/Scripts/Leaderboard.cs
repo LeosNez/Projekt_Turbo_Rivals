@@ -43,10 +43,10 @@ public class Leaderboard : MonoBehaviour
                 if (timeParts.Length == 3 &&
                     int.TryParse(timeParts[0], out int minutes) &&
                     int.TryParse(timeParts[1], out int seconds) &&
-                    int.TryParse(timeParts[2], out int fractions))
+                    int.TryParse(timeParts[2], out int miliseconds))
                 {
                     // Vytvoøení TimeSpan objektu pro èas hráèe
-                    TimeSpan timeSpan = new TimeSpan(0, 0, minutes, seconds, fractions);
+                    TimeSpan timeSpan = new TimeSpan(0, 0, minutes, seconds, miliseconds);
                     // Pøidání jména hráèe a jeho èasu do seznamu
                     playerTimes.Add(new Tuple<string, TimeSpan>(playerName, timeSpan));
                 }

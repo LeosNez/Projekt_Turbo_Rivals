@@ -31,6 +31,10 @@ public class Menu : MonoBehaviour
 
         tretiButton.clicked += TretiClick;
 
+        Button ctvrtyButton = rootVisualElement.Q<Button>("Lvl4");
+
+        ctvrtyButton.clicked += CtvrtyClick;
+
         Button ldbrButton = rootVisualElement.Q<Button>("Ldbr");
 
         ldbrButton.clicked += LdbrClick;
@@ -60,6 +64,11 @@ public class Menu : MonoBehaviour
     void TretiClick()
     {
         SceneManager.LoadScene("Level3");
+    }
+
+    void CtvrtyClick()
+    {
+        SceneManager.LoadScene("Level4");
     }
 
     void LdbrClick()

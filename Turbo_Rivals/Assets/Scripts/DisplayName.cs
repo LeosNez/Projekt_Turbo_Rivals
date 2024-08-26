@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class DisplayName : MonoBehaviour
 {
     public Text PlayerNameText; 
-
     void Start()
     {
         if (!string.IsNullOrEmpty(PlayerName.PlyrName))
@@ -17,7 +16,7 @@ public class DisplayName : MonoBehaviour
         }
         else
         {
-            //SceneManager.LoadScene(6);
+            SceneManager.LoadScene(6);
             UnityEngine.Debug.Log("Zadej své uživatelské jméno");
         }
     }

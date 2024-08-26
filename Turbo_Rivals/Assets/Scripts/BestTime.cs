@@ -23,7 +23,7 @@ public class BestTime : MonoBehaviour
     string FindBestTime(string text)
     {
         string pattern = @"(\d{2}):(\d{2}):(\d{2})";
-        Regex regex = new Regex(pattern);
+        Regex regex = new Regex(pattern); // Regulární výraz je speciální textový øetìzec, který definuje vzor pro vyhledávání nebo manipulaci s textem.
         MatchCollection matches = regex.Matches(text);
 
         TimeSpan bestTime = TimeSpan.MaxValue;
@@ -33,13 +33,13 @@ public class BestTime : MonoBehaviour
         {
             if (int.TryParse(match.Groups[1].Value, out int minutes) &&
                 int.TryParse(match.Groups[2].Value, out int seconds) &&
-                int.TryParse(match.Groups[3].Value, out int fractions))
+                int.TryParse(match.Groups[3].Value, out int miliseconds))
             {
-                TimeSpan currentTime = new TimeSpan(0, 0, minutes, seconds, fractions);
+                TimeSpan currentTime = new TimeSpan(0, 0, minutes, seconds, miliseconds);
                 if (currentTime < bestTime)
                 {
                     bestTime = currentTime;
-                    bestTimeString = $"{minutes:D2}:{seconds:D2}:{fractions:D2}";
+                    bestTimeString = $"{minutes:D2}:{seconds:D2}:{miliseconds:D2}";
                 }
             }
         }

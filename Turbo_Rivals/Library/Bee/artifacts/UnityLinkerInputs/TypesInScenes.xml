@@ -1,6 +1,7 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="BestTime" preserve="nothing"/>
+		<type fullname="CarSounds" preserve="nothing"/>
 		<type fullname="ChangeColor" preserve="nothing"/>
 		<type fullname="Checkpoint" preserve="nothing"/>
 		<type fullname="Cil" preserve="nothing"/>
@@ -11,7 +12,6 @@
 		<type fullname="LowPolyWater.LowPolyWater" preserve="nothing"/>
 		<type fullname="Menu" preserve="nothing"/>
 		<type fullname="Movement" preserve="nothing"/>
-		<type fullname="music" preserve="nothing"/>
 		<type fullname="Odpocitavani" preserve="nothing"/>
 		<type fullname="Olej" preserve="nothing"/>
 		<type fullname="Pause" preserve="nothing"/>
@@ -20,6 +20,7 @@
 		<type fullname="PrechodSceny" preserve="nothing"/>
 		<type fullname="Prekazky" preserve="nothing"/>
 		<type fullname="Quit" preserve="nothing"/>
+		<type fullname="Radio" preserve="nothing"/>
 		<type fullname="SaveData" preserve="nothing"/>
 		<type fullname="ShowlLdbrd" preserve="nothing"/>
 		<type fullname="SmerSipky" preserve="nothing"/>
@@ -38,6 +39,7 @@
 		<type fullname="UnityEditor.TagManager" preserve="nothing"/>
 		<type fullname="UnityEditor.TimeManager" preserve="nothing"/>
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
+		<type fullname="UnityEngine.Animator" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioListener" preserve="nothing"/>
@@ -51,8 +53,10 @@
 		<type fullname="UnityEngine.Collider" preserve="nothing"/>
 		<type fullname="UnityEngine.Component" preserve="nothing"/>
 		<type fullname="UnityEngine.Cubemap" preserve="nothing"/>
+		<type fullname="UnityEngine.FixedJoint" preserve="nothing"/>
 		<type fullname="UnityEngine.Font" preserve="nothing"/>
 		<type fullname="UnityEngine.GameObject" preserve="nothing"/>
+		<type fullname="UnityEngine.Joint" preserve="nothing"/>
 		<type fullname="UnityEngine.Light" preserve="nothing"/>
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.Material" preserve="nothing"/>
@@ -88,12 +92,6 @@
 		<type fullname="UnityEngine.UI.InputField" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.RawImage" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
-	</assembly>
-	<assembly fullname="UnityEngine.UIElementsModule">
-		<type fullname="UnityEngine.UIElements.PanelSettings" preserve="nothing"/>
-		<type fullname="UnityEngine.UIElements.StyleSheet" preserve="nothing"/>
-		<type fullname="UnityEngine.UIElements.ThemeStyleSheet" preserve="nothing"/>
-		<type fullname="UnityEngine.UIElements.UIDocument" preserve="nothing"/>
-		<type fullname="UnityEngine.UIElements.VisualTreeAsset" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Toggle" preserve="nothing"/>
 	</assembly>
 </linker>

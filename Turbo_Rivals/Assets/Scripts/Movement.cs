@@ -170,6 +170,10 @@ public class Movement : MonoBehaviour
             aktualniRychlost = 0f;
             moveInput = 0f;
             rotateInput = 0f;
+            cC.CaraV1.SetActive(false);
+            cC.CaraV2.SetActive(false);
+            cC.CaraO1.SetActive(false);
+            cC.CaraO2.SetActive(false);
         }
     }
 
@@ -228,6 +232,11 @@ public class Movement : MonoBehaviour
         {
             aktualniRychlost = 0f;
         }
+
+        if (col.gameObject.CompareTag("Obstacle"))
+        {
+            aktualniRychlost = -aktualniRychlost / 10;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -251,7 +260,7 @@ public class Movement : MonoBehaviour
             originalZataceni = zataceni;
 
             isTurnBoostActive = true;
-            zataceni = 25f;
+            zataceni = 40f;
             turnBoostTimer = 0f;
         }
 

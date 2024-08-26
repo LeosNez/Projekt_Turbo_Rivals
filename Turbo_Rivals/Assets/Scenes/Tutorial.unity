@@ -231,6 +231,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea801c84e62e15b48ab7864ebccdaa1c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 472534302}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea801c84e62e15b48ab7864ebccdaa1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1881855271}
     - targetCorrespondingSourceObject: {fileID: 8576266321995765872, guid: ea801c84e62e15b48ab7864ebccdaa1c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 851285557}
@@ -283,25 +286,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4c2abfff7f166408ec61ebeb4dbeba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Needle: {fileID: 1920439450}
+  needle: {fileID: 1920439450}
   Zpatecka: {fileID: 287769881}
-  Fire: {fileID: 472534301}
-  MinAngle: -45
-  MaxAngle: 225
-  Zataceni: 50
-  Akcelerace: 5
-  MaxRychlost: 100
-  CouvaciRychlost: 20
-  ZataceniDrift: 150
-  TurboAcceleration: 100
-  IsTurboActive: 0
-  AktualniRychlost: 0
-  IsSpeedBoostActive: 0
-  SpeedBoostTimer: 0
-  IsTurnBoostActive: 0
-  TurnBoostTimer: 0
+  fire: {fileID: 1881855270}
+  minAngle: -45
+  maxAngle: 225
+  zataceni: 50
+  akcelerace: 5
+  maxRychlost: 200
+  couvaciRychlost: 20
+  zataceniDrift: 150
+  turboAcceleration: 100
+  aktualniRychlost: 0
+  isSpeedBoostActive: 0
+  speedBoostTimer: 0
+  isTurnBoostActive: 0
+  turnBoostTimer: 0
   isAccBoostActive: 0
-  AccBoostTimer: 0
+  accBoostTimer: 0
   FrontLeftWheel: {fileID: 1054085501}
   FrontRightWheel: {fileID: 1054085500}
   MaxSteerAngle: 30
@@ -2052,6 +2054,113 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1881855270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1881855271}
+  - component: {fileID: 1881855274}
+  - component: {fileID: 1881855273}
+  - component: {fileID: 1881855272}
+  m_Layer: 0
+  m_Name: Fire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1881855271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881855270}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.9682045, y: -0.3552339, z: -4.299999}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 17076804}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!136 &1881855272
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881855270}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1881855273
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881855270}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: dd124beb3bb151145bd564ead5058e8e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1881855274
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881855270}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1920439446
 GameObject:
   m_ObjectHideFlags: 0
